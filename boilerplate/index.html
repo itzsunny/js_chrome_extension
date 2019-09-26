@@ -6,10 +6,59 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Alegreya:400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap" rel="stylesheet">
     <title>Chrome</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <div class="login">
+        <h3 class="hey">Hello,what's your name?</h3>
+        <input type="text" class="enterName">
+    </div>
+   
+    <section class="containerAll">
+        <div class="clockContainer">
+            <div id = "time">00:00:00</div>
+            <div>
+              <h2 id ="greetings"></h2>
+              <span class="userName">
+              </span>
+          </div>
+        </div>
+        <!-- ************************quote***********************
+         -->
+    <div class="quotesBig">
+        <blockquote id="quoteContainer" class="quote"></blockquote>
+        <a id="authorName" class="authorName" rel="author"></a>
+    </div>
+    
+    <!--************************ todo ************************* -->
+        <div class="container">
+            <h1 class="todo">todos</h1>
+           <div class="input_container">
+            <input type="text" placeholder="What needs to be done?" id = "input" >
+            <img src="arrow.png" alt="arrow" class="i">
+           </div> 
+            <ul class="list">
+            </ul>
+            <div class="foot">
+                <div class="footer1">
+                    <span class="item_count"> 0 </span><span class="item">item's left</span>
+                    <span><a class="all all1" href="#">All</a></span>
+                    <span><a class="active" href="#">Active</a></span>
+                    <span><a class="completed" href="#">Completed</a></span>
+                    <span><a class="clear_completed" href="#">Clear completed</a></span>
+                </div>
+                <div class="f1"></div>
+                <div class="f2"></div>
+                <div class="f3"></div>
+             </div>
+    </section>
+   
+        
+        <!-- **************************** todo end ************************ -->
+    <script src="./js/data.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
