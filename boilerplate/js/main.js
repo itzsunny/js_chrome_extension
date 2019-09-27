@@ -32,11 +32,13 @@ function displayTime() {
     } else if (hours < 12) {
         en = 'AM';
     }
-    if (hours > 5  ) {
+    if (hours > 5 ) {
         greetings.innerText = "Good evening,";
-    } else if (hours > 12 ) {
+    } 
+    if (hours > 12 && hours <  5 ) {
         greetings.innerText = "Good afternoon,";
-    } else if (hours < 12) {
+    } 
+     if (hours < 12 ) {
         greetings.innerText = "Good morning,";
     }
     if (hours > 12) {
