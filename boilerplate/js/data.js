@@ -308,3 +308,82 @@ var quotes = [
         "quoteText": "Great talent finds happiness in execution."
     }
 ];
+
+var morningImg = ['img/morning/m1.jpg','img/morning/m2.jpg','img/morning/m3.jpg','img/morning/m4.jpg',
+'img/morning/m5.jpg','img/morning/m6.jpg','img/morning/m7.jpg','img/morning/m8.jpg','img/morning/m9.jpg',
+'img/morning/m10.jpg','img/morning/m11.jpg','img/morning/m12.jpg','img/morning/m13.jpg','img/morning/m14.jpg',
+'img/morning/m15.jpg','img/morning/m16.jpg','img/morning/m17.jpg','img/morning/m18.jpg','img/morning/m19.jpg',
+'img/morning/m20.jpg','img/morning/m21.jpg','img/morning/m22.jpg','img/morning/m23.jpg','img/morning/m24.jpg',
+'img/morning/m25.jpg','img/s1.jpg','img/s2.jpg','img/s3.jpg','img/s4.jpg','img/s5.jpg'];
+
+var afternoonImg = ['img/afternoon/a1.jpg','img/afternoon/a2.jpg','img/afternoon/a3.jpg','img/afternoon/a4.jpg',
+'img/afternoon/a5.jpg','img/afternoon/a6.jpg','img/afternoon/a7.jpg','img/afternoon/a8.jpg','img/afternoon/a9.jpg',
+'img/afternoon/a10.jpg','img/afternoon/a11.jpg','img/afternoon/a12.jpg','img/afternoon/a13.jpg',
+'img/afternoon/a14.jpg','img/afternoon/a15.jpg','img/afternoon/a16.jpg','img/afternoon/a17.jpg',
+'img/afternoon/a18.jpg','img/afternoon/a19.jpg','img/afternoon/a20.jpg','img/afternoon/a21.jpg',
+'img/afternoon/a22.jpg','img/afternoon/a23.jpg','img/afternoon/a24.jpg','img/afternoon/a25.jpg',
+'img/afternoon/a26.jpg','img/afternoon/a27.jpg','img/afternoon/a28.jpg','img/afternoon/a29.jpg',
+'img/afternoon/a30.jpg','img/afternoon/a31.jpg','img/afternoon/a32.jpg',
+'img/s1.jpg','img/s2.jpg','img/s3.jpg','img/s4.jpg','img/s5.jpg']  ;
+
+var eveningImg = ['img/evening/e1.jpg','img/evening/e2.jpg','img/evening/e3.jpg','img/evening/e4.jpg',
+'img/evening/e5.jpg','img/evening/e6.jpg','img/evening/e7.jpg','img/evening/e8.jpg','img/evening/e9.jpg',
+'img/evening/e10.jpg','img/evening/e11.jpg','img/evening/e12.jpg','img/evening/e13.jpg',
+'img/evening/e14.jpg','img/evening/e15.jpg','img/evening/e16.jpg','img/evening/e17.jpg',
+'img/evening/e18.jpg','img/evening/e19.jpg','img/evening/e20.jpg','img/evening/e21.jpg',
+'img/evening/e22.jpg','img/evening/e23.jpg','img/evening/e24.jpg','img/evening/e25.jpg',
+'img/evening/e26.jpg','img/evening/e27.jpg','img/evening/e28.jpg','img/evening/e29.jpg',
+'img/evening/e30.jpg','img/evening/e31.jpg',
+'img/s1.jpg','img/s2.jpg','img/s3.jpg','img/s4.jpg','img/s5.jpg'];
+
+var nightImg = ['img/night/n1.jpg','img/night/n2.jpg','img/night/n3.jpg','img/night/n4.jpg','img/night/n5.jpg'];              
+
+
+// ...................... light theme for todo ...................
+
+function todoLight () {
+let todo = document.querySelector('.todo');
+todo.style.color = 'rgba(252, 252, 252, 0.8)';
+let time = document.querySelector('#time');
+let greetings = document.getElementById('greetings');
+let userName = document.querySelector('.userName');
+let en = document.querySelector('.en');
+en.style.color = "#fff";
+userName.style.color = '#fff';
+userName.style.webkitTextStroke = "transparent";
+time.style.color = '#fff';
+time.style.webkitTextStroke = "transparent";
+greetings.style.color ="#fff";
+greetings.style.webkitTextStroke = "transparent";
+let quote = document.querySelector('.quote');
+quote.style.color = "#fff";
+let quoteText = document.querySelector('.authorName');
+quoteText.style.color = "#fff";
+document.querySelector('.footer1').classList.add('footer2');
+let input = document.querySelector('.input_container');
+input.firstElementChild.style.color = 'rgb(0,0,0)';
+input.firstElementChild.className = 'inputBox';
+input.firstElementChild.style.boxShadow = 'none';
+input.firstElementChild.style.backgroundColor = 'rgb(255,255,255,0.6)';
+}
+
+function todoLightMorning() {
+
+let todo = document.querySelector('.todo');
+todo.style.color = 'rgba(252, 252, 252, 0.8)';
+let time = document.querySelector('#time');
+let greetings = document.getElementById('greetings');
+let userName = document.querySelector('.userName');
+let en = document.querySelector('.en');
+en.style.color = "#fff";
+userName.style.color = '#fff';
+userName.style.webkitTextStroke = "transparent";
+time.style.color = '#fff';
+time.style.webkitTextStroke = "transparent";
+greetings.style.color ="#fff";
+greetings.style.webkitTextStroke = "transparent";
+let quote = document.querySelector('.quote');
+quote.style.color = "#fff";
+let quoteText = document.querySelector('.authorName');
+quoteText.style.color = "#fff";
+}

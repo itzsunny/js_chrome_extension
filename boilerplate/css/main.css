@@ -52,59 +52,146 @@ table {
     box-sizing: border-box;
 }
 /* ***************************body************************* */
-
-body {
+/* body for login page */
+.body1 {
     position: relative;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: initial;
-    -webkit-font-smoothing: antialiased;
-    font: 14px ;
+    background: url("../img/n2.jpg") no-repeat fixed center;
+    background-size: cover;
+    
+}
+/* body after login */
+.body {
+    position: relative;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: initial;
+    /* -webkit-font-smoothing: antialiased; */
     background: no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    display: block;
 }
+/* to remove the login page */
+
 .login {
+    position: absolute;
+    top:330px;
+    left:7%;
+    text-align: center;
+    display: block;
+}
+.login1, .passwordCreate , .passwordVerify {
+    display: none;
+}
+
+/* properties of login password */
+
+.passwordCreateAdd {
+    position: absolute;
+    text-align:center;
+    top:330px;
+    left:5%;
+    display: block;
+}
+.passwordVerifyAdd {
+    position: absolute;
+    top:330px;
+    text-align:center;
+    left:28%;
     display: flex;
     flex-flow: column;
-    justify-content: center;
     align-items: center;
-    height:100vh;
+    justify-content: center;
 }
+
+.passwordCreateRemove, .passwordVerifyRemove {
+
+    display: none;
+
+}
+
+/* enter your name , password ,verify properties */
 .hey {
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
- font-size: 3.4rem;
+ font-size: 3.6rem;
  color:#fff;
- font-weight: 500;
- text-shadow: 1px 1px 4px rgb(117, 115, 115);
+ font-weight: 700;
+ text-shadow: 1px 1px 4px 5px rgb(173, 169, 169);
+
 }
-.nameEnter {
-display: none;
-}
+.hey2 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     font-size: 3.6rem;
+     color:#fff;
+     font-weight: 700;
+     text-shadow: 1px 1px 4px 5px rgb(173, 169, 169);
+    
+    }
+.hey3 {
+    
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     font-size: 3.6rem;
+     color:#fff;
+     font-weight: 700;
+     text-shadow: 1px 1px 4px 5px rgb(173, 169, 169);
+}    
+
+/*  input value properties */
+
 .enterName {
-    width:40%;
-    font-size: 3rem;
+    width:50%;
+    font-size: 3.4rem;
     margin-top: 1rem;
+    font-weight: 500;
     border:none;
     background: transparent;
     outline: none;
-    border-bottom: 3px solid #fff;
+    border-bottom: 2px solid #fff;
     color:#fff;
     text-align: center;
-    text-shadow: 1px 1px 4px rgb(117, 115, 115);
-    z-index: 0;
-
-
-}
-.userName {
-    font-size: 40px;
-    color:#fff;
     text-shadow: 1px 1px 4px 5px rgb(173, 169, 169);
- 
-
+    z-index: 0;
 }
-
+.createPasswordInput {
+    width:50%;
+    font-size: 3.4rem;
+    margin-top: 1rem;
+    font-weight: 500;
+    border:none;
+    background: transparent;
+    outline: none;
+    border-bottom: 2px solid #fff;
+    color:#fff;
+    text-align: center;
+    text-shadow: 1px 1px 4px 5px rgb(173, 169, 169);
+    z-index: 0;
+}
+.verifyPasswordInput {
+    width:70%;
+    font-size: 3.4rem;
+    margin-top: 1rem;
+    font-weight: 500;
+    border:none;
+    background: transparent;
+    outline: none;
+    border-bottom: 2px solid #fff;
+    color:#fff;
+    text-align: center;
+    text-shadow: 1px 1px 4px 5px rgb(173, 169, 169);
+    z-index: 0;
+}
+/* print the name to main page */
+.userName {
+    font-size: 2.812rem;;
+    color:rgba(0, 0, 0, 0.6);
+    -webkit-text-stroke: 1px #000; 
+    /* text-shadow: 0px 0px 2px rgb(211, 208, 208); */
+ 
+}
+/*  hide the main page  */
 .containerAll {
     display: none;
 }
@@ -115,18 +202,35 @@ display: none;
     right:0;
     left:0;
     z-index: 2;
+    background: no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 /*  clock  */
 #time {
+-webkit-font-smoothing: antialiased;
  font-family: 'DM Sans', sans-serif;
  font-weight: 500;
- font-size: 160px;
- color:#fff;
+ font-size: 12.5rem;
+ color:rgba(0, 0, 0, 0.7);
  letter-spacing: 3px;
  padding-top: 40px;
- text-shadow: 1px 1px 4px 5px rgb(173, 169, 169);
- 
+ display: inline-block;
+ -webkit-text-stroke: 1px rgb(0, 0, 0); 
 }
+.en {
+    transition: transform 0.3s ease-in-out;
+    display: none;
+}
+/* #time:hover ~.en {
+    font-size: 2rem;
+    color:rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+} */
 
 .clockContainer {
      display: flex;
@@ -137,10 +241,12 @@ display: none;
 }
 /*  greetings  */
 #greetings {
-    font-size: 40px;
-    color:#fff;
-    text-shadow: 1px 1px 4px 5px rgb(173, 169, 169);
+    font-size: 2.812rem;
+    color:rgba(0, 0, 0, 0.7);
+    -webkit-text-stroke: 1px #000; 
+    /* text-shadow: 0px 0px 2px rgb(211, 208, 208); */
     display: inline-block;
+    -webkit-font-smoothing: antialiased;
 
 }
 
@@ -154,28 +260,30 @@ display: none;
     
 }
 .quote,.authorName {
-    text-shadow: 0px 0px 4px rgb(107, 104, 104);
+    /* text-shadow: 0px 0px 1px rgb(211, 208, 208); */
+    color:rgba(0, 0, 0, 1);
+    /* -webkit-text-stroke: 1px #000;  */
 }
 .quote {
     font-family: 'Alegreya', serif;
     font-weight: 100;
     word-spacing: 1.5;
-    font-size: 24px;
-    color:#fff;
+    font-size: 1.5rem;
+    /* text-shadow: 0px 0px 1px rgb(211, 208, 208); */
     line-height: 1rem;
     cursor: pointer;
     
 }
 .authorName {
-    opacity: 0;
+    display: none;
   }
 
 .quote:hover ~ .authorName {
-    opacity: 1;
+    display: inline-block;
     font-family: 'Alegreya', serif;
     font-weight: 100;
-    font-size:16px;
-    color:rgb(255, 255, 255);
+    font-size:1rem;
+    color:rgba(0, 0, 0, 0.9);
     padding-top: 1rem;
 }
 
@@ -193,10 +301,10 @@ display: none;
     display: block;
 }
 .todo {
+    -webkit-font-smoothing: antialiased;
     font-size: 3.5rem;
     font-weight: 200;
-    color:rgba(252, 252, 252, 0.8);
-    text-shadow: 0 0 0 4px black;
+    color:rgba(0,0,0,0.7);
     font-style:normal;
     margin:1rem 0;
     text-rendering: optimizeLegibility;
@@ -208,7 +316,7 @@ display: none;
 .input_container input[type="text"] {
     padding:10px 40px;
     width:100%;
-    background:rgba(0, 0, 0, 0.5);
+    background:rgba(0, 0, 0, 0.6);
     color:#fff;
     font-size: 1.5rem;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -223,12 +331,16 @@ display: none;
     outline: 0;
 }
 .input_container input::placeholder {
+    -webkit-font-smoothing: antialiased;
     color:rgb(175, 169, 169);
     font-size: 1rem;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: italic;
     font-weight: 200;
     
+}
+.input_container .inputBox::placeholder {
+    color:rgb(12, 12, 12);
 }
 .input_container i {
     position: absolute;
@@ -238,15 +350,15 @@ display: none;
 }
 .li_list {
 
-    font-size: 1.2rem;
-    color:#ffffff;
+    font-size: 1.1rem;
+    color:#000000;
     font-weight: 200;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 0.5rem 2.4rem 0.5rem 2.5rem;
     border:none;
     width: 100%;
-    box-shadow: 0px 10px 20px -5px rgba(134, 131, 131, 0.5);
-    background:rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 5px -5px rgba(238, 236, 236, 0.2);
+    background:rgba(255, 255, 255, 0.6);
     position: relative;
     line-height: 1.3;
     word-spacing: 2px;
@@ -264,7 +376,7 @@ display: none;
     height:1.3rem;
     width:1.3rem;
     border-radius: 50%;
-    border: 1px solid rgba(209, 205, 205, 0.5);
+    border: 1px solid rgb(165, 164, 164);
     background:transparent;
     position: absolute;
     left:0.6rem;
@@ -338,6 +450,7 @@ display: none;
     display: block;
 }
 .item,.all1,.completed,.active,.clear_completed,.item_count{
+    -webkit-font-smoothing: antialiased;
     margin:0 0.1rem;
     font-size: 0.7rem;
     padding:0.2rem;
@@ -350,6 +463,7 @@ display: none;
 }
 .item1,.completed1,.active1,.clear_completed1{
     border:1px solid #E9D6D8;
+    color:#f7f1f1;
     border-radius: 4px;
     font-size: 0.7rem;
 }
@@ -383,7 +497,7 @@ h3 {
 }
 .footer1 {
     padding:0.4rem 0;
-    background:rgba(37, 36, 36, 0.8);
+    background:rgba(0, 0, 0, 0.7);
     position: relative;
     border: none;
     box-shadow: 0px 0px 10px -5px rgba(134, 131, 131, 0.5);
@@ -413,4 +527,128 @@ h3 {
     cursor: pointer;
    
 }
+
+/* ***********************todo light **********************/
+
+.footer2 {
+    background:rgba(255, 255, 255, 0.7);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.footer2 .item, .footer2 .item_count{
+    -webkit-font-smoothing: antialiased;
+    color:#000000;
+}
+.footer2 .all1 {
+    -webkit-font-smoothing: antialiased;
+    color:#000000;
+}
+.footer2 .completed{
+    -webkit-font-smoothing: antialiased;
+    color:#000000;
+}
+.footer2 .active{
+    -webkit-font-smoothing: antialiased;
+    color:#000000;
+}
+.footer2 .clear_completed {
+    -webkit-font-smoothing: antialiased;
+    color:#000000;
+}
+.footer2 .all1:hover {
+    border:1px solid rgb(37, 37, 37);
+    border-radius: 4px;
+}
+.footer2 .completed:hover {
+    border:1px solid rgb(37, 37, 37);
+    border-radius: 4px;
+}
+.footer2  .active:hover {
+    border:1px solid rgb(37, 37, 37);
+    border-radius: 4px;
+}
+.footer2 .item1, .footer2 .completed1, .footer2 .active1, .footer2 .clear_completed1{
+    border:1px solid rgb(37, 37, 37);
+    border-radius: 4px;
+    font-size: 0.7rem;
+}.footer2 .all {
+    padding:0.2rem;
+    border:1px solid rgb(129, 125, 126);
+    font-weight: 200;
+    color:#000000;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+   
+}
+
 /* ********************* todo end ************************* */
+@media screen and (max-width:480px) {
+    html {
+        font-size: 10px;
+    }
+    #time {
+        font-size: 8rem;
+    }
+    #greetings {
+        font-size: 2rem;
+    }
+    .allContainer {
+        text-align: center;
+    }
+    .container {
+        min-width: 70%;
+        align-self: top;
+        left:4.2rem;
+      justify-content: center;
+        text-align: center;
+    }
+}
+@media screen and (max-width:768px ) {
+    html {
+        font-size: 12px;
+    }
+    #time {
+        font-size: 10rem;
+    }
+    #greetings {
+        font-size: 2rem;
+    }
+    .allContainer {
+        text-align: center;
+    }
+    .container {
+        width: 35%;
+        margin:0 auto;
+        position: absolute;
+        right:50px;
+        top:10px;
+        text-align: center;
+        display: block;
+    }
+}
+@media screen and (max-width:1024px ) {
+    html {
+        font-size: 12px;
+    }
+    #time {
+        font-size: 10rem;
+    }
+    #greetings {
+        font-size: 2rem;
+    }
+    .allContainer {
+        text-align: center;
+    }
+    .container {
+
+        width: 30%;
+        margin:0 auto;
+        position: absolute;
+        right:50px;
+        top:10px;
+        text-align: center;
+        display: block;
+    }
+    
+}

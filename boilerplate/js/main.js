@@ -3,42 +3,138 @@
 // .........................welcome ..........................
 
 let hey = document.querySelector('.hey');
+let passwordInput = document.querySelector('.createPasswordInput');
+let verifyInput = document.querySelector('.verifyPasswordInput');
 let enterName = document.querySelector('.enterName');
 let userName = document.querySelector('.userName');
 let containerAll = document.querySelector('.containerAll');
+let login1 = document.querySelector('.login');
+let createPasswordContainer = document.querySelector('.passwordCreate');
+let verifyPasswordContainer = document.querySelector('.passwordVerify');
+let inputArr = JSON.parse(localStorage.getItem('arr-list')) || [];
+console.log(inputArr);
+
+let inputValue = {
+    name: "",
+    password: ""
+};
+
+function checkLogin (){
+
+    if (inputArr.length && inputArr[0].password != ""){
+        login1.classList.add('login1');
+        createPasswordContainer.classList.add('passwordCreateRemove');
+        verifyPasswordContainer.classList.add('passwordVerifyRemove');
+        console.log('input Arr inside chek',inputArr)
+        name = inputArr[0].name
+        userName.innerText = name[0].toUpperCase() + name.slice(1);
+        console.log('username',name[0].toUpperCase() + name.slice(1))
+        document.body.classList.add('body');
+        containerAll.classList.add('allContainer');
+    }
+    else{
+        console.log('before set state')
+        inputArr = []
+        localStorage.setItem('arr-list',JSON.stringify(inputArr))
+    }
+}
+checkLogin();
 
 function login (event) {
     if (event.keyCode === 13 && event.target.value.trim() != ""){
-        userName.innerText = enterName.value.toUpperCase() ;
-        containerAll.classList.add('allContainer');
-        enterName.classList.add('nameEnter');
-        hey.innerText = "";
+        inputValue['name'] = event.target.value;
+        name = inputValue['name']
+        userName.innerText = name[0].toUpperCase() + name.slice(1);
+        inputArr.push(inputValue);
+        login1.classList.add('login1');
+        createPasswordContainer.classList.add('passwordCreateAdd');
+        console.log('im in');
+        hey.value = "";
+        // inputView(inputArr) 
     }
+    localStorage.setItem('arr-list', JSON.stringify(inputArr));
 }
-enterName.addEventListener('keyup',login);
-    
 
+function createPassword (event) {
+
+    if (event.keyCode === 13 && event.target.value.trim() != ""){
+        inputValue['password'] = event.target.value;
+        inputArr.push(inputValue);
+        createPasswordContainer.classList.add('passwordCreateRemove');
+        verifyPasswordContainer.classList.add('passwordVerifyAdd');
+        passwordInput.value = "";
+    }
+    localStorage.setItem('arr-list', JSON.stringify(inputArr));
+}
+console.log(inputArr);
+
+// TEST
+console.log(localStorage, 'Check local storage')
+// if (localStorage)
+// 
+function verifyPassword (event) {
+    if (event.keyCode === 13 && event.target.value.trim() != ''){
+        let match = event.target.value;
+        console.log('lol', match, inputArr[0].password);
+        if (match == inputArr[0].password) {
+        verifyPasswordContainer.classList.add('passwordVerifyRemove');
+        document.body.classList.add('body');
+        containerAll.classList.add('allContainer');
+        } 
+    }
+    localStorage.setItem('arr-list', JSON.stringify(inputArr));   
+    console.log('outside lol');
+}
+
+    
 // ..........................Clock...............................
 setInterval(displayTime,500);
 function displayTime() {
     let time = new Date();
     let hours = time.getHours();
     let mints = time.getMinutes();
-    let seconds = time.getSeconds();
     let greetings = document.getElementById('greetings');
-    let en = 'AM'
+
+    let en = document.querySelector('.en');
     if (hours > 12 ){
-        en = 'PM';
-    } else if (hours < 12) {
-        en = 'AM';
+
+       EN = en .innerText = 'PM';
+
+    } else if (hours < 12 ) {
+
+       EN =  en.innerText =  'AM';
     }
-    if (hours > 5 ) {
-        greetings.innerText = "Good evening,";
-    } 
-    if (hours > 12 && hours <  5 ) {
+
+    if (hours >= 12 && hours < 17) {
+        if(greetings.innerText !== "Good afternoon,") {
+            afternoonBg () 
+        }
         greetings.innerText = "Good afternoon,";
     } 
-     if (hours < 12 ) {
+
+    if (hours >= 17 && hours <= 21) {
+
+        if(greetings.innerText !== "Good evening,") {
+            todoLight()
+            eveningBg ()  
+        }
+        greetings.innerText = "Good evening,";
+       
+    }
+    
+    if (hours > 21) {
+        if(greetings.innerText !== "Good night,") {
+            todoLight()
+            nightBg () 
+        }
+        greetings.innerText = "Good night,";
+    } 
+
+     if (hours < 12) {
+        if(greetings.innerText !== "Good morning,") {
+            todoLightMorning()
+            morningBg () 
+        }
         greetings.innerText = "Good morning,";
     }
     if (hours > 12) {
@@ -63,32 +159,39 @@ function displayTime() {
 //.......................................
 
 
+
+
 //............................random background......................... 
 
-function randombg() {
- 
-    var img = ['img/bg1.jpg','img/bg2.jpg','img/bg3.jpg','img/bg4.jpg','img/bg5.jpg',
-                'img/bg6.jpg','img/bg7.jpg','img/bg8.jpg','img/bg9.jpg','img/bg10.jpg',
-                'img/bg11.jpg','img/bg12.jpg','img/bg13.jpg','img/bg14.jpg',  'img/bg15.jpg',  'img/bg16.jpg',
-                'img/bg17.jpg','img/bg18.jpg', 'img/bg19.jpg','img/bg20.jpg', 'img/bg21.jpg',  'img/bg22.jpg',
-                'img/bg23.jpg','img/bg24.jpg', 'img/bg25.jpg','img/bg26.jpg','img/bg27.jpg','img/bg28.jpg',
-                'img/bg29.jpg','img/bg30.jpg','img/bg31.jpg','img/bg32.jpg','img/bg33.jpg',
-                'img/bg34.jpg', 'img/bg35.jpg', 'img/bg36.jpg','img/bg37.jpg','img/bg38.jpg','img/bg39.jpg',
-                'img/bg40.jpg','img/bg41.jpg','img/bg42.jpg','img/bg43.jpg', 'img/bg44.jpg',
-                'img/bg45.jpg','img/bg46.jpg','img/bg47.jpg','img/bg48.jpg','img/bg49.jpg',
-                'img/bg50.jpg','img/bg51.jpg', 'img/bg52.jpg','img/bg53.jpg','img/bg54.jpg',
-                'img/bg55.jpg','img/bg56.jpg','img/bg57.jpg','img/bg58.jpg','img/bg59.jpg',
-                'img/bg60.jpg','img/d1.jpg','img/d2.jpg','img/d3.jpg','img/d4.jpg','img/d5.jpg',
-                'img/d6.jpg','img/d7.jpg','img/d8.jpg','img/d9.jpg','img/n1.jpg','img/n2.jpg',
-                'img/n3.jpg','img/n4.jpg','img/n5.jpg','img/n6.jpg','img/n7.jpg',
-                ];
+function morningBg() {
 
-selectBG = img[Math.floor(Math.random() * img.length)];
-document.body.style.backgroundImage = 'url(' + selectBG + ')';
+let selectBG = morningImg[Math.floor(Math.random() * morningImg.length)];
+document.querySelector('.body').style.backgroundImage = 'url(' + selectBG + ')';
 
 }
-randombg ()
+function afternoonBg() {
+
+    let selectBG = afternoonImg[Math.floor(Math.random() * afternoonImg.length)];
+    document.querySelector('.body').style.backgroundImage = 'url(' + selectBG + ')';
+    
+}
+function eveningBg() {
+
+    let selectBG = eveningImg[Math.floor(Math.random() * eveningImg.length)];
+    document.querySelector('.body').style.backgroundImage = 'url(' + selectBG + ')';
+    
+}
+function nightBg() {
+
+    let selectBG = nightImg[Math.floor(Math.random() * nightImg.length)];
+    document.querySelector('.body').style.backgroundImage = 'url(' + selectBG + ')';
+    
+}
+
+
 //........................................
+
+
 
 
 // .................................quotes............................
@@ -137,9 +240,10 @@ function view (arrayToDisplay) {
     arrayToDisplay.forEach((item,index) => {
         let li = document.createElement("li");
         li.className = "li_list";
+        li.classList.add('li_list2');
         const check = document.createElement("input");
         check.type = "checkbox";
-        check.setAttribute("data-id", index);
+        check.setAttribute("data-id", todoList.indexOf(item));
         check.id = 'right-'+index;
         check.className = "check";
         const newLabel = document.createElement("Label");
@@ -165,7 +269,7 @@ function view (arrayToDisplay) {
             img.style.opacity = "1";
             imgContainer.style.border = "none";
             p.style.textDecoration = "line-through";
-            p.style.color = "rgba(238, 231, 231,0.4)";
+            p.style.color = "rgba(0, 0, 0,0.4)";
         } else {
             img.style.opacity = "0";
             p.style.textDecoration = "none";
@@ -183,9 +287,8 @@ function view (arrayToDisplay) {
 }
 
 function handleSubmit (event){
-    console.log(event.target.value);
     if (event.keyCode === 13 && event.target.value.trim() != "") {
-        const todoText = {text: '', isDone: false ,id:''};
+        const todoText = {text: '', isDone: false , id:''};
         todoText.text = input.value;
         todoList.push(todoText);
         input.style.border = "none";
@@ -196,7 +299,6 @@ function handleSubmit (event){
         event.target.value = "";
         view(todoList);
     }
-
 }    
     function deleteSubmit (event) {
         console.log('inside delete',event)
@@ -213,6 +315,7 @@ function handleSubmit (event){
     function handleCheck (event) {
         console.log("handle check",event);
         var id = event.target.dataset.id
+        console.log(id);
         todoList[id].isDone = !todoList[id].isDone;
         view(todoList)
 
@@ -287,12 +390,13 @@ function handleSubmit (event){
             })
         }
         
-        console.log('hola');
         view(todoList);
     }
 
     view(todoList);
-
+    enterName.addEventListener('keyup',login);
+    passwordInput.addEventListener('keydown',createPassword);
+    verifyInput.addEventListener('keydown',verifyPassword);
     input.addEventListener('keydown', handleSubmit);
     completedTodo.addEventListener('click',completed);
     activeTodo.addEventListener('click',active);
