@@ -143,9 +143,9 @@ function displayTime() {
     if (hours == 0) {
         hours = 12;
     } 
-    if (hours < 10) {
-        hours = '0' + hours;
-    }
+    // if (hours < 10) {
+    //     hours = '0' + hours;
+    // }
     if (mints < 10) {
         mints = '0' + mints;
     // }

@@ -314,7 +314,7 @@ var morningImg = ['img/morning/m1.jpg','img/morning/m2.jpg','img/morning/m3.jpg'
 'img/morning/m10.jpg','img/morning/m11.jpg','img/morning/m12.jpg','img/morning/m13.jpg','img/morning/m14.jpg',
 'img/morning/m15.jpg','img/morning/m16.jpg','img/morning/m17.jpg','img/morning/m18.jpg','img/morning/m19.jpg',
 'img/morning/m20.jpg','img/morning/m21.jpg','img/morning/m22.jpg','img/morning/m23.jpg','img/morning/m24.jpg',
-'img/morning/m25.jpg','img/s1.jpg','img/s2.jpg','img/s3.jpg','img/s4.jpg','img/s5.jpg'];
+'img/morning/m25.jpg','img/s1.jpg','img/s2.jpg','img/s3.jpg','img/s4.jpg','img/s5.jpg','img/s6.jpg','img/s7.jpg','img/s8.jpg','img/s9.jpg'];
 
 var afternoonImg = ['img/afternoon/a1.jpg','img/afternoon/a2.jpg','img/afternoon/a3.jpg','img/afternoon/a4.jpg',
 'img/afternoon/a5.jpg','img/afternoon/a6.jpg','img/afternoon/a7.jpg','img/afternoon/a8.jpg','img/afternoon/a9.jpg',
@@ -323,8 +323,9 @@ var afternoonImg = ['img/afternoon/a1.jpg','img/afternoon/a2.jpg','img/afternoon
 'img/afternoon/a18.jpg','img/afternoon/a19.jpg','img/afternoon/a20.jpg','img/afternoon/a21.jpg',
 'img/afternoon/a22.jpg','img/afternoon/a23.jpg','img/afternoon/a24.jpg','img/afternoon/a25.jpg',
 'img/afternoon/a26.jpg','img/afternoon/a27.jpg','img/afternoon/a28.jpg','img/afternoon/a29.jpg',
-'img/afternoon/a30.jpg','img/afternoon/a31.jpg','img/afternoon/a32.jpg',
-'img/s1.jpg','img/s2.jpg','img/s3.jpg','img/s4.jpg','img/s5.jpg']  ;
+'img/afternoon/a30.jpg','img/afternoon/a31.jpg','img/afternoon/a32.jpg','img/afternoon/a33.jpg',
+'img/afternoon/a34.jpg','img/afternoon/a35.jpg','img/afternoon/a36.jpg','img/afternoon/a37.jpg',
+'img/s1.jpg','img/s2.jpg','img/s3.jpg','img/s4.jpg','img/s5.jpg','img/s7.jpg','img/s8.jpg']  ;
 
 var eveningImg = ['img/evening/e1.jpg','img/evening/e2.jpg','img/evening/e3.jpg','img/evening/e4.jpg',
 'img/evening/e5.jpg','img/evening/e6.jpg','img/evening/e7.jpg','img/evening/e8.jpg','img/evening/e9.jpg',
@@ -334,9 +335,10 @@ var eveningImg = ['img/evening/e1.jpg','img/evening/e2.jpg','img/evening/e3.jpg'
 'img/evening/e22.jpg','img/evening/e23.jpg','img/evening/e24.jpg','img/evening/e25.jpg',
 'img/evening/e26.jpg','img/evening/e27.jpg','img/evening/e28.jpg','img/evening/e29.jpg',
 'img/evening/e30.jpg','img/evening/e31.jpg',
-'img/s1.jpg','img/s2.jpg','img/s3.jpg','img/s4.jpg','img/s5.jpg'];
+'img/s1.jpg','img/s2.jpg','img/s3.jpg','img/s4.jpg','img/s5.jpg','img/s6.jpg','img/s9.jpg'];
 
-var nightImg = ['img/night/n1.jpg','img/night/n2.jpg','img/night/n3.jpg','img/night/n4.jpg','img/night/n5.jpg'];              
+var nightImg = ['img/night/n1.jpg','img/night/n2.jpg','img/night/n3.jpg','img/night/n4.jpg','img/night/n5.jpg','img/night/n6.jpg',
+'img/night/n7.jpg','img/night/n8.jpg','img/night/n9.jpg'];              
 
 
 // ...................... light theme for todo ...................
